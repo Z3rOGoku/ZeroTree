@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,300;1,200&family=Poppins:ital,wght@0,300;0,500;1,400&family=Rajdhani:wght@500&family=Roboto+Condensed:ital,wght@0,400;1,300;1,400&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,300;1,200&family=Oswald&family=Poppins:ital,wght@0,300;0,500;1,400&family=Rajdhani:wght@500&family=Roboto+Condensed:ital,wght@0,400;1,300;1,400&display=swap');
+
+
+
+body {
+    margin: 0;
+    background-color: antiquewhite;
+    /* background-color: rgb(224, 250, 215); */
+
+    font-family: 'Kanit', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+/* Apply fonts to specific elements */
+h1, h2, p {
+    font-family: 'Poppins', sans-serif;
+}
+
+.main{
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.profile {
+    /* background-color: aquamarine; */
+    height: 10vh;
+    width: 20vw;
+    border-radius: 50%;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.profile img {
+    height: 100px;
+    border-radius: 50%;
+}
+
+.list-items {
+    list-style: none;
+    padding: 0;
+}
+
+.list-items li {
+    background-color: azure;
+    border-radius: 30px;
+    width: 100vw;
+    max-width: 500px;
+    height: 5vh;
+    margin: 30px;
+    text-align: center;
+    display: flex; /* Use flexbox to center content horizontally and vertically */
+    align-items: center;
+    justify-content: space-around;
+}
+
+span {
+    margin-left: -100px;
+    width: 30vw;
+}
+
+.img-bg {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the image horizontally and vertically */
+    margin-right: 10px; /* Add spacing between the image and text */
+}
+
+.img-bg img {
+    height: 40px;
+    width: 43px; /* Adjust the image size as needed */
+}
+
+/* Add this CSS for the hover animation */
+.list-items li:hover {
+    cursor: pointer;
+    transform: scale(1.1); /* Increase the scale on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a box shadow on hover */
+    transition: transform 0.1s ease, box-shadow 0.3s ease; /* Add a transition effect */
+}
+
+
+footer{
+    /* background-color: #333; Adjust background color as needed */
+    color: rgb(0, 0, 0); /* Adjust text color as needed */
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 0px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+}
+
+.footer-div{
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(255, 255, 255);
+    justify-content: center;
+    
+}
+
+
+.cursor {
+    display: block;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+    border-radius: 50%;
+    background: black;
+    pointer-events: none;
+    z-index: 111;
+    border: 1px solid #000;
+    transition: all 0.2s ease-out;
+    animation: moveCursor1 .5s infinite alternate;
+}
+
+.expand {
+    background: transparent;
+    animation: moveCursor2 .5s forwards;
+    border: 1px solid #000;
+}
+
+@keyframes moveCursor1 {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(.8);
+    }
+}
+
+@keyframes moveCursor2 {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(2);
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
